@@ -1,0 +1,168 @@
+/* CSS Reset Starts */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  background-color: var(--white--color);
+  font-family: Roboto, Arial, sans-serif;
+
+  /* text not to be selectable */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap:80px;
+}
+
+.main-top-ad__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    gap: 3px;
+    color: rgb(47, 47, 47);
+}
+
+.main-top-ad__text {
+    text-align: center;
+    padding: 17px 0px;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.main-menubar {
+    width: 100%;
+    margin-top:50px;
+    position: fixed;
+    background-color: #ccc;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 15px 3rem;
+    align-items: center;
+    height: 50px;
+}
+
+.main-menubar__left-items {
+    display: flex;
+    flex-grow: 0.18;
+    flex-basis: 0;
+}
+
+.main-menubar-left-items-hero__img {
+    width: 100%;
+}
+
+.menubar__mid-items {
+    display: flex;
+    flex-flow: row;
+    gap: 1.8rem;
+
+}
+
+.menubar__right-items {
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    .menubar__mid-items,.menubar-right-items__shop,.menubar-right-items__account{
+        display: none;
+    }
+    
+  }
