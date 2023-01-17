@@ -23,7 +23,7 @@
 html,
 body {
   height: 100%;
-  background-color: var(--white--color);
+  overflow: hidden;
 
 
   /* text not to be selectable */
@@ -107,13 +107,13 @@ body {
 .main {
   display: flex;
   flex-flow: column nowrap;
+  gap: 2px;
 
 }
 
 main>div {
   display: inline-block;
   aspect-ratio: 1/1;
-  margin: 5px;
   scroll-snap-align: center;
 }
 
@@ -159,7 +159,10 @@ main>div {
 }
 
 .main-menubar-left-items-hero__img {
-  width: 100%;
+  position: absolute;
+  top: -1rem;
+  width: 8rem;
+  z-index: 7;
 }
 
 .menubar__mid-items {
@@ -171,12 +174,12 @@ main>div {
 }
 
 .menubar-mid-items__item{
-  padding: 8px;
+  padding: 4px;
 }
 
 .menubar-mid-items__item:hover{
   cursor:pointer;
-  background-color: rgba(0, 0, 0,0.05);
+  background-color: rgba(62, 63, 68,0.07);
   border-radius: 3px;
   
 
@@ -194,17 +197,8 @@ main>div {
 
 
 
-.slide__title,
-.slide__link,
-.slide-botton__left,
-.slide-botton__right,
-.slide-botton {
-  z-index: 3;
-
-}
 
 .main-slider {
-  margin-top: 5rem;
   width: 100%;
   overflow: auto;
   scroll-snap-type: y mandatory;
@@ -212,33 +206,35 @@ main>div {
 }
 
 .main-slider__slide {
-  padding-top: 9rem;
   scroll-snap-align: start;
+  width: auto;
   height: 100vh;
   display: flex;
   position: relative;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-bottom:100em;
 }
+
 
 #slide-one {
   padding-top: 0;
 }
 
 #slide-sixth {
-  margin-bottom: 19rem;
+  margin-bottom: 30rem;
 }
 
 .slide__title {
-  position: absolute;
-  top: 13%;
+  top:2.5em;
   font-size: 2.8rem;
+  position:absolute;
 }
 
 .slide__link {
   position: absolute;
-  top: 21%;
+  top: 11em;
 
 }
 
@@ -264,16 +260,14 @@ main>div {
 }
 
 .slide-button__container {
+  top:40em;
   position: absolute;
-  top: 77%;
-  left: 33%;
   gap: 6px;
 
 }
 
 .slide-botton {
-  position: absolute;
-  top: 70.5%;
+  margin-top: 38em;
   padding: 7px 95px;
   font-size: 0.9rem;
   font-weight: bold;
@@ -281,12 +275,13 @@ main>div {
   border-radius: 3px;
   color: #fff;
   background-color: rgb(36, 36, 36);
+  z-index: 6;
 
 }
 
 .slide__image-last {
   position: absolute;
-  margin-top: -275px;
+  margin-top: -3rem;
   z-index: 0;
 }
 
@@ -327,6 +322,11 @@ a:hover {
   .menubar-right-items__shop,
   .menubar-right-items__account {
     display: none;
+  }
+
+  .main-menubar-left-items-hero__img{
+    position: static;
+    width: 8rem;
   }
 
 }
