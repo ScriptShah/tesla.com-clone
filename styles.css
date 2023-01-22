@@ -90,18 +90,14 @@ h6 {
   isolation: isolate;
 }
 
-html {
 
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-}
 
 body {
 
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .main {
@@ -111,11 +107,6 @@ body {
 
 }
 
-main>div {
-  display: inline-block;
-  aspect-ratio: 1/1;
-  scroll-snap-align: center;
-}
 
 .main-top-ad__container {
   display: flex;
@@ -131,7 +122,7 @@ main>div {
 
 .main-top-ad__text {
   text-align: center;
-  padding: 17px 0px;
+  padding: 20px 0px;
   letter-spacing: 1px;
   line-height: 1.3em;
   font-size: 90%;
@@ -152,17 +143,16 @@ main>div {
   font-weight: 600;
 }
 
-.main-menubar__left-items {
-  display: flex;
-  flex-grow: 0.18;
-  flex-basis: 0;
+.main-menubar-left-items-hero__img {
+  position: relative;
+  width: 8rem;
+  height: auto;
 }
 
-.main-menubar-left-items-hero__img {
-  position: absolute;
-  top: -1rem;
-  width: 8rem;
-  z-index: 7;
+.main-menubar-left-items-hero__container {
+  width: auto;
+  height: auto;
+  margin-left: -2rem;
 }
 
 .menubar__mid-items {
@@ -173,9 +163,6 @@ main>div {
 
 }
 
-.menubar-mid-items__item {
-  padding: 4px;
-}
 
 .menubar-mid-items__item:hover {
   cursor: pointer;
@@ -190,123 +177,8 @@ main>div {
   flex-flow: row;
   gap: 2rem;
 
-}
 
 
-
-
-
-
-
-.main-slider {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  gap: 7rem;
-}
-
-.main-slider__slide {
-  scroll-snap-align: start;
-  width: auto;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-
-#slide-one {
-  padding-top: 0;
-}
-/* #space{
-  width: 100%;
-  height: 400px;
-  background-color: #3E3F44;
-  position: absolute;
-} */
-
-#cable{
-  margin-top: 25rem;
-}
-
-.slide__title {
-  top: 2.5em;
-  font-size: 2.8rem;
-  position: absolute;
-}
-
-.slide__link {
-  position: absolute;
-  top: 11em;
-
-}
-
-.slide-botton__left {
-  padding: 6px 75px;
-  font-weight: bold;
-  border-color: transparent;
-  border-radius: 3px;
-  color: #fff;
-  background-color: #3E3F44;
-  font-size: 0.9rem;
-  margin-right: 15px;
-}
-
-.slide-botton__left:hover{
-  cursor: pointer;
-  color: #fff;
-  opacity: 85%;
-  background-color: #000;
-}
-
-.slide-botton__right:hover{
-  color: #fff;
-  background-color: #000;
-  opacity: 85%;
-  cursor: pointer;
-}
-
-.slide-botton:hover{
-  cursor: pointer;
-  color: #000;
-  opacity: 85%;
-  background-color: #fff;
-  border: 0.01em solid #000;
-}
-
-.slide-botton__right {
-  padding: 7px 75px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-color: transparent;
-  border-radius: 3px;
-  color: #3E3F44;
-  background-color: #fff;
-}
-
-.slide-button__container {
-  top: 40em;
-  position: absolute;
-  gap: 6px;
-
-}
-
-.slide-botton {
-  margin-bottom: 38rem;
-  padding: 7px 95px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-color: transparent;
-  border-radius: 3px;
-  color: #fff;
-  background-color: rgb(36, 36, 36);
-  z-index: 6;
 
 }
 
@@ -316,9 +188,7 @@ main>div {
 
 
 
-.phone__image {
-  display: none;
-}
+
 
 a {
   color: #3E3F44;
@@ -330,13 +200,210 @@ a:hover {
 }
 
 
-.main-footer__list {
-  top: 90%;
+
+.space-top {
+  height: 6rem;
+}
+
+
+
+
+
+
+.main-slider {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.main-slider__slide-one,
+.main-slider__slide-two,
+.main-slider__slide-three,
+.main-slider__slide-four,
+.main-slider__slide-five,
+.main-slider__slide-six {
+  scroll-snap-align: center;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background: url(images/Desktop-Model-Y.jpeg) no-repeat center / cover;
+}
+
+.main-slider__slide-two {
+  background: url(images/Desktop-Model-3.jpeg) no-repeat center / cover;
+}
+
+.main-slider__slide-three {
+  background: url(images/Desktop-Model-S.jpeg) no-repeat center / cover;
+}
+
+.main-slider__slide-four {
+  background: url(images/Desktop-Model-X.jpeg) no-repeat center / cover;
+}
+
+.main-slider__slide-five {
+  background: url(images/Desktop-SolarPanels.jpeg) no-repeat center / cover;
+}
+
+.main-slider__slide-six {
+  background: url(images/Desktop-SolarRoof.jpg) no-repeat center / cover;
+}
+
+
+
+
+
+
+.space-one {
+  height: 10vh;
+  width: auto;
+
+}
+
+.space-two {
+  height: 55vh;
+  width: auto;
+}
+
+.space-three {
+  height: 20vh;
+  width: auto;
+}
+
+
+
+.main-slider_container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+.slide__title {
+  font-size: 2.8rem;
+}
+
+
+.slide-botton__left {
+  padding: 7px 80px;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3E3F44;
+  font-size: 0.9rem;
+}
+
+.slide-botton__left:hover {
+  cursor: pointer;
+  color: #fff;
+  opacity: 85%;
+  background-color: #000;
+}
+
+.slide-botton__right:hover {
+  color: #fff;
+  background-color: #000;
+  opacity: 85%;
+  cursor: pointer;
+}
+
+.slide-botton:hover {
+  cursor: pointer;
+  color: #000;
+  opacity: 85%;
+  background-color: #fff;
+  border: 0.01em solid #000;
+}
+
+.slide-botton__right {
+  padding: 7px 78px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 3px;
+  color: #3E3F44;
+  background-color: #fff;
+}
+
+.slide-button__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.slide-botton {
+  padding: 7px 95px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgb(36, 36, 36);
+  z-index: 6;
+
+}
+
+.main-slider__slide-seven {
+  scroll-snap-align: center;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background: url(images/cable.jpeg) no-repeat center;
+  background-size: 100%;
+
+
+}
+
+
+.main-slider__slide-seven .space-one {
+  height: 5vh;
+}
+
+.main-slider__slide-seven .space-two {
+  height: 90vh;
+}
+
+.main-slider__slide-seven .space-three {
+  height: 5vh;
+}
+
+.main-slider__slide-seven .space-four {
+  height: 25vh;
+}
+
+
+
+
+
+
+
+
+
+.main-footer__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
-  position: absolute;
+  position: relative;
   z-index: 5;
   gap: 20px;
   font-size: 0.9rem;
@@ -366,28 +433,100 @@ a:hover {
 
 }
 
-@media only screen and (max-width: 800px) {
-  .slide__title {
-    top: 7em;
-    font-size: 2rem;
-    position: absolute;
+@media only screen and (max-width:800px) {
+  .main-slider__slide-one {
+    background: url(images/mobile-model-y.jpeg) no-repeat center / cover;
   }
 
-  .slide__link {
-    position: absolute;
-    top: 9em;
+  .main-slider__slide-two {
+    background: url(images/mobile-model-3.jpeg) no-repeat center / cover;
+  }
+
+  .main-slider__slide-three {
+    background: url(images/mobile-model-s.jpeg) no-repeat center / cover;
+  }
+
+  .main-slider__slide-four {
+    background: url(images/mobile-model-x.jpeg) no-repeat center / cover;
+  }
+
+  .main-slider__slide-five {
+    background: url(images/Mobile-solar-panel.jpeg) no-repeat center / cover;
+  }
+
+  .main-slider__slide-six {
+    background: url(images/mobile-solar-roof.jpg) no-repeat center / cover;
+  }
+
+  .main-slider__slide-seven {
+    background: url(images/mobile-cable.jpeg) no-repeat center / 70%;
+  }
+
+}
+
+@media only screen and (max-height:450px) {
+
+
+  .space-one {
+    height: 10vh;
+    width: auto;
 
   }
 
-  .slide-button__container {
-    position: absolute;
+  .space-two {
+    height: 50vh;
+    width: auto;
   }
 
-  .main-slider__slide {
-    padding: 0;
-    margin: -2rem;
+  .space-three {
+    height: 50vh;
+    width: auto;
   }
 
 
+}
+
+
+@media only screen and (max-width:300px) {
+
+
+  .main-menubar {
+    margin-top: 7rem;
+  }
+
+  .space-top {
+    height: 10rem;
+  }
+
+  .space-one {
+    height: 40vh;
+    width: auto;
+
+  }
+
+  .space-two {
+    height: 50vh;
+    width: auto;
+  }
+
+  .space-three {
+    height: 60vh;
+    width: auto;
+  }
+
+  .slide-botton__left,
+  .slide-botton__right {
+    padding: 10px;
+  }
+
+  .main-slider__slide-one,
+  .main-slider__slide-two,
+  .main-slider__slide-three,
+  .main-slider__slide-four,
+  .main-slider__slide-five,
+  .main-slider__slide-six,
+  .main-slider__slide-seven {
+    height: 100vh;
+  }
 
 }
