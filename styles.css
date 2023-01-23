@@ -93,21 +93,20 @@ h6 {
 
 
 /* importing fonts */
-
 @font-face {
   font-family: Gotham-fonts;
   src: url(fonts/Gotham\ Book.otf);
 }
 
 
+/* applying font and font size */
 body {
-
   font-family: Gotham-fonts;
   font-size: 1rem;
-  font-weight: 400;
   overflow: hidden;
 }
 
+/* our main container */
 .main {
   display: flex;
   flex-flow: column nowrap;
@@ -115,7 +114,7 @@ body {
 
 }
 
-
+/* our top advertisement container*/
 .main-top-ad__container {
   display: flex;
   flex-flow: row wrap;
@@ -128,6 +127,7 @@ body {
   color: rgb(47, 47, 47);
 }
 
+/* our top advertisement text*/
 .main-top-ad__text {
   color: #606061;
   text-align: center;
@@ -137,12 +137,15 @@ body {
   font-size: 14px;
 }
 
+/* our top advertisement link*/
 .main-top-ad__text a {
   color: #606061;
   font-weight: 100;
   text-underline-offset: 3px;
 }
 
+
+/* styling menubar container */
 .main-menubar {
   width: 100%;
   margin-top: 60px;
@@ -157,41 +160,33 @@ body {
   font-weight: 600;
 }
 
+
+/* styling menubar hero image */
 .main-menubar-left-items-hero__img {
   position: relative;
   width: 8rem;
   height: auto;
 }
 
+/* styling menubar hero container */
 .main-menubar-left-items-hero__container {
   width: auto;
   height: auto;
   margin-left: -2rem;
 }
 
+
+/* styling menubar middle items */
 .menubar__mid-items {
   display: flex;
   flex-flow: row;
   gap: 2.8rem;
-
-
 }
-
 
 .menubar-mid-items__item:hover {
   cursor: pointer;
   background-color: rgba(62, 63, 68, 0.07);
   border-radius: 3px;
-
-
-}
-
-.menubar__right-items {
-  display: flex;
-  flex-flow: row;
-  gap: 2rem;
-
-
 }
 
 .menubar-mid-items__item a {
@@ -201,7 +196,18 @@ body {
 
 
 
+/* styling menubar right items */
+.menubar__right-items {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+}
 
+
+
+
+
+/* global styling for anchor element */
 a {
   color: #3E3F44;
   font-weight: 600;
@@ -213,15 +219,10 @@ a:hover {
 
 
 
-/* .space-top {
-  height: 6rem;
-} */
 
 
 
-
-
-
+/* left style our main slider container */
 .main-slider {
   display: flex;
   flex-flow: column nowrap;
@@ -231,6 +232,8 @@ a:hover {
   height: 100vh;
 }
 
+
+/* apply reaction and styling for each slide of slider */
 .main-slider__slide-one,
 .main-slider__slide-two,
 .main-slider__slide-three,
@@ -248,6 +251,9 @@ a:hover {
   background: url(images/Desktop-Model-Y.jpeg) no-repeat center / cover;
 }
 
+
+
+/* set background for each slide */
 .main-slider__slide-two {
   background: url(images/Desktop-Model-3.jpeg) no-repeat center / cover;
 }
@@ -271,8 +277,7 @@ a:hover {
 
 
 
-
-
+/* our empty div for better managing space */
 .space-one {
   height: 20vh;
   width: auto;
@@ -291,14 +296,15 @@ a:hover {
 
 
 
-.main-slider_container {
+/* set properties for slide container , 
+slide title , slide link , 
+slide bottons */
+.main-slide_container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
 }
-
-
 
 .slide__title {
   color: #1f1f21;
@@ -310,6 +316,21 @@ a:hover {
   font-size: 90%;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+.slide-button__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  transition: opacity 2s;
+
+}
+
+.slide-button__container:hover {
+  opacity: 0.7;
 }
 
 
@@ -358,33 +379,10 @@ a:hover {
 
 }
 
-.slide-button__container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: auto;
-  transition: opacity 2s;
 
-}
 
-.slide-button__container:hover {
-  opacity: 0.7;
-}
 
-.slide-botton {
-  padding: 7px 95px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-color: transparent;
-  border-radius: 3px;
-  color: #fff;
-  background-color: rgb(36, 36, 36);
-  z-index: 6;
-
-}
-
+/* set properties for seventh slide separativly */
 .main-slider__slide-seven {
   scroll-snap-align: center;
   width: auto;
@@ -400,7 +398,6 @@ a:hover {
 
 
 }
-
 
 .main-slider__slide-seven .space-one {
   height: 23vh;
@@ -422,13 +419,22 @@ a:hover {
   font-size: 2.5rem;
 }
 
+.seventh-slide-botton{
+  padding: 7px 95px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgb(36, 36, 36);
+  z-index: 6;
+}
 
 
 
 
 
-
-
+/* let style our footer */
 .main-footer__list {
   display: flex;
   flex-flow: row wrap;
@@ -442,6 +448,7 @@ a:hover {
   font-size: 12px;
   font-weight: 100;
   word-spacing: 3px;
+  margin-right: 2rem;
 }
 
 .main-footer__list li {
@@ -453,6 +460,10 @@ a:hover {
 }
 
 
+
+/* configuration for screens */
+
+/* medium PC screens */
 @media only screen and (max-width: 1200px) {
 
   .menubar__mid-items,
@@ -468,7 +479,10 @@ a:hover {
 
 }
 
+/* smaller PC or Ipad screens */
 @media only screen and (max-width:800px) {
+
+  /* adding portrait photos instead of landscape for better resolution*/
   .main-slider__slide-one {
     background: url(images/mobile-model-y.jpeg) no-repeat center / cover;
   }
@@ -501,7 +515,7 @@ a:hover {
 
 }
 
-
+/* phone screens and landscape and portrait rotations settings*/
 @media only screen and (max-width:600px) {
 
   .slide-botton__right {
@@ -513,16 +527,10 @@ a:hover {
   }
 }
 
-
-
-
 @media only screen and (max-height:450px) {
-
-
   .space-one {
     height: 10vh;
     width: auto;
-
   }
 
   .space-two {
@@ -534,14 +542,9 @@ a:hover {
     height: 50vh;
     width: auto;
   }
-
-
 }
 
-
 @media only screen and (max-width:450px) {
-
-
   .main-menubar {
     margin-top: 7rem;
   }
