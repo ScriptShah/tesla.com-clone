@@ -569,6 +569,27 @@ slide bottons */
     width: auto;
   }
 
+  .main-slider__slide-seven .space-one {
+    height: 10vh;
+  }
+  
+  .main-slider__slide-seven .space-two {
+    height: 80vh;
+  }
+  
+  .main-slider__slide-seven .space-three {
+    height: 15vh;
+  }
+  
+  .main-slider__slide-seven .space-four {
+    height: 50vh;
+  }
+  
+  .main-slider__slide-seven .slide__title {
+    font-size: 2.5rem;
+  }
+  
+
   .slide-botton__left,
   .slide-botton__right {
     padding: 10px;
@@ -582,6 +603,12 @@ slide bottons */
   .main-slider__slide-six,
   .main-slider__slide-seven {
     height: 100vh;
+  }
+
+  .main-slider__slide-seven {
+    background: url(images/mobile-cable.jpeg) no-repeat;
+    background-position: 50% 190%;
+    background-size: 90%;
   }
 
 }
