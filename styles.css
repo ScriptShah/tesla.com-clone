@@ -400,7 +400,7 @@ slide bottons */
 }
 
 .main-slider__slide-seven .space-one {
-  height: 5vh;
+  height: 35vh;
 }
 
 .main-slider__slide-seven .space-two {
@@ -412,7 +412,7 @@ slide bottons */
 }
 
 .main-slider__slide-seven .space-four {
-  height: 40vh;
+  height: 20vh;
 }
 
 .main-slider__slide-seven .slide__title {
@@ -509,8 +509,8 @@ slide bottons */
 
   .main-slider__slide-seven {
     background: url(images/mobile-cable.jpeg) no-repeat;
-    background-position: 50% 190%;
-    background-size: 100%;
+    background-position: 50% 60%;
+    background-size: 90%;
   }
 
 }
