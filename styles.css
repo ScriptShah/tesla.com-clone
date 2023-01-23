@@ -92,9 +92,17 @@ h6 {
 
 
 
+/* importing fonts */
+
+@font-face {
+  font-family: Gotham-fonts;
+  src: url(fonts/Gotham\ Book.otf);
+}
+
+
 body {
 
-  font-family: 'Rubik', sans-serif;
+  font-family: Gotham-fonts;
   font-size: 1rem;
   font-weight: 400;
   overflow: hidden;
@@ -121,12 +129,18 @@ body {
 }
 
 .main-top-ad__text {
+  color: #606061;
   text-align: center;
-  padding: 20px 0px;
-  letter-spacing: 1px;
-  line-height: 1.3em;
-  font-size: 90%;
-  font-weight: 600;
+  padding: 17px 20px;
+  line-height: 1.4em;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+.main-top-ad__text a {
+  color: #606061;
+  font-weight: 100;
+  text-underline-offset: 3px;
 }
 
 .main-menubar {
@@ -178,8 +192,6 @@ body {
   gap: 2rem;
 
 
-
-
 }
 
 .menubar-mid-items__item a {
@@ -201,9 +213,9 @@ a:hover {
 
 
 
-.space-top {
+/* .space-top {
   height: 6rem;
-}
+} */
 
 
 
@@ -262,7 +274,7 @@ a:hover {
 
 
 .space-one {
-  height: 10vh;
+  height: 20vh;
   width: auto;
 
 }
@@ -289,11 +301,20 @@ a:hover {
 
 
 .slide__title {
-  font-size: 2.8rem;
+  color: #1f1f21;
+  font-size: 2.3rem;
+}
+
+.slide__link {
+  font-weight: 100;
+  font-size: 90%;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 
 .slide-botton__left {
+  opacity: 90%;
   padding: 7px 80px;
   font-weight: bold;
   border-color: transparent;
@@ -326,13 +347,15 @@ a:hover {
 }
 
 .slide-botton__right {
+  opacity: 70%;
   padding: 7px 78px;
   font-size: 0.9rem;
   font-weight: bold;
   border-color: transparent;
   border-radius: 3px;
-  color: #3E3F44;
+  color: #000000;
   background-color: #fff;
+
 }
 
 .slide-button__container {
@@ -341,7 +364,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  width: auto;
+  transition: opacity 2s;
 
+}
+
+.slide-button__container:hover {
+  opacity: 0.7;
 }
 
 .slide-botton {
@@ -365,7 +394,8 @@ a:hover {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  background: url(images/cable.jpeg) no-repeat center;
+  background: url(images/cable.jpeg) no-repeat;
+  background-position: 50% 60%;
   background-size: 100%;
 
 
@@ -373,21 +403,24 @@ a:hover {
 
 
 .main-slider__slide-seven .space-one {
-  height: 5vh;
+  height: 23vh;
 }
 
 .main-slider__slide-seven .space-two {
-  height: 90vh;
+  height: 80vh;
 }
 
 .main-slider__slide-seven .space-three {
-  height: 5vh;
+  height: 15vh;
 }
 
 .main-slider__slide-seven .space-four {
-  height: 25vh;
+  height: 5vh;
 }
 
+.main-slider__slide-seven .slide__title {
+  font-size: 2.5rem;
+}
 
 
 
@@ -405,8 +438,10 @@ a:hover {
   height: auto;
   position: relative;
   z-index: 5;
-  gap: 20px;
-  font-size: 0.9rem;
+  gap: 15px;
+  font-size: 12px;
+  font-weight: 100;
+  word-spacing: 3px;
 }
 
 .main-footer__list li {
@@ -459,10 +494,27 @@ a:hover {
   }
 
   .main-slider__slide-seven {
-    background: url(images/mobile-cable.jpeg) no-repeat center / 70%;
+    background: url(images/mobile-cable.jpeg) no-repeat;
+    background-position: 50% 30%;
+    background-size: 70%;
   }
 
 }
+
+
+@media only screen and (max-width:600px) {
+
+  .slide-botton__right {
+    padding: 7px auto;
+  }
+
+  .slide-botton__left {
+    padding: 7px auto;
+  }
+}
+
+
+
 
 @media only screen and (max-height:450px) {
 
@@ -487,7 +539,7 @@ a:hover {
 }
 
 
-@media only screen and (max-width:300px) {
+@media only screen and (max-width:450px) {
 
 
   .main-menubar {
