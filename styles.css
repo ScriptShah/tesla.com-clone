@@ -509,8 +509,8 @@ slide bottons */
 
   .main-slider__slide-seven {
     background: url(images/mobile-cable.jpeg) no-repeat;
-    background-position: 50% 30%;
-    background-size: 70%;
+    background-position: 50% 190%;
+    background-size: 100%;
   }
 
 }
